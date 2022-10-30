@@ -8,7 +8,7 @@ public class PizzaCaliforniaPepperoni extends PizzaProducto {
         super();
         nombre = "Pizza California Pepperoni";
         masa = "Masa a la piedra gruesa";
-        salsa = "P";
+        salsa = "Salsa de queso azul";
         ingredientes.add("Pepperoni");
         ingredientes.add("Extra queso mozzarella");
         ingredientes.add("Aceitunas");
