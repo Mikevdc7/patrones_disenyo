@@ -9,18 +9,12 @@ public class PizzeriaNewYorkFactory extends PizzeriaZonaAbstractFactory{
 
     @Override
     public PizzaProducto crearPizza(String tipo) {
-        PizzaProducto producto = null;
-        switch (tipo){
-            case "vegetariana":
-                producto = new PizzaNewYorkVegetariana();
-                break;
-            case "pepperoni":
-                producto = new PizzaNewYorkPepperoni();
-                break;
-            case "italiana":
-                producto = new PizzaNewYorkItaliana();
-                break;
-        }
+        PizzaProducto producto = switch (tipo) {
+            case "vegetariana" -> new PizzaNewYorkVegetariana();
+            case "pepperoni" -> new PizzaNewYorkPepperoni();
+            case "italiana" -> new PizzaNewYorkItaliana();
+            default -> null;
+        };
         return producto;
     }
 }
